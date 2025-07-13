@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
-# Lists files in current directory, printing part after first dash, or full name if no dash
+# List files/folders in current directory, print part after first dash or whole name if no dash
 
 for file in *; do
+  # Skip hidden files/folders
   [[ "$file" == .* ]] && continue
+  # Only process if file/folder exists (handles empty dirs gracefully)
+  [[ -e "$file" ]] || continue
+
   if [[ "$file" == *-* ]]; then
     echo "${file#*-}"
   else
