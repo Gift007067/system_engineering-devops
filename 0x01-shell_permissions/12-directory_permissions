@@ -1,0 +1,3 @@
+#!/bin/bash
+echo -e 'mkdir my_dir\nchmod 751 my_dir' > 12-directory_permissions
+chmod +x 12-directory_permissions
