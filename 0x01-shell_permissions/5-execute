@@ -1,2 +1,0 @@
-echo 'chmod u+x hello' > 5-execute
-chmod +x 5-execute

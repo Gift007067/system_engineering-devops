@@ -1,3 +1,0 @@
-#!/bin/bash
-echo 'find . -type d -exec chmod a+x {} +' > 11-directories_permissions
-chmod +x 11-directories_permissions
