@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 #
-pgrep -a bash | awk '{print $1, $2}'
+for pid in $(pgrep bash); do
+    if exe_path=$(readlink -f /proc/"$pid"/exe 2>/dev/null); then
+        echo "$pid" "$exe_path"
+    fi
+done
