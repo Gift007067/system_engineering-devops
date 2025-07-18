@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #
-pid=$(pgrep -f 7-highlander)
-if [ -n "$pid" ]; then
-    kill -9 $pid
-fi
+for pid in $(pgrep -f 7-highlander); do
+    kill -9 "$pid"
+done
