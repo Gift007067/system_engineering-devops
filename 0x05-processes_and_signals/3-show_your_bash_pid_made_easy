@@ -1,8 +1,2 @@
-#!/usr/bin/env bash
-#
-for pid in $(pgrep bash); do
-    exe=$(readlink -f /proc/"$pid"/exe 2>/dev/null)
-    if [ -n "$exe" ]; then
-        echo "$pid $exe"
-    fi
-done
+#!/bin/bash
+pgrep -af bash
